@@ -11,6 +11,7 @@
 @import url(/Glass-Wave/Addons/ChatBubbles.css);
 @import url(/Glass-Wave/Addons/Icons.css);
 @import url(/Glass-Wave/Addons/Animations.css);
+@import url("https://dablulite.github.io/NexusRemastered/import.css");
 
 
 /* ─── VARIABLES ROOT ──────────────────────────────────────── */
@@ -65,6 +66,15 @@
     --green-360: rgb(35 165 89 / 80%);
     --green-330: rgb(35 165 89 / 100%);
     --status-danger: var(--var-notification);
+
+    --nexus-elevation-shadow: 0 0 0 1.5px var(--nexus-accent-color), 0 2px 10px 0 rgb(0 0 0 / 60%);
+	--nexus-font: 'Montserrat', 'Open Sans';
+	--nexus-accent-color: var(--var-accent);
+	--nexus-blur-radius: 10px;
+	--nexus-status-mask-background: var(--profile-body-background-color);
+	--window-margin: 8;
+	--window-border-radius: 8px;
+
 }
 
 
@@ -2299,3 +2309,6 @@ html.theme-dark .mutualFriendsList_b433b4 > .collapseBtn_a4a127:hover { backgrou
     border: 1px solid rgba(255, 255, 255, 0.4) !important;
     transition: var(--FG-transition) !important;
 }
+
+/* Conteneur principal */
+.searchBar_c322aa .DraftEditor-root { display: unset; }
