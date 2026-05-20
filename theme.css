@@ -7,10 +7,12 @@
 @import url("https://raw.githubusercontent.com/warrayquipsome/Chillax/refs/heads/main/Addons/AvatarOnlyMemberList.css");
 @import url("https://raw.githubusercontent.com/warrayquipsome/Chillax/refs/heads/main/Addons/ColoredLinks.css");
 @import url("https://raw.githubusercontent.com/warrayquipsome/Chillax/refs/heads/main/Addons/IconPackEdited.css");
-@import url(/Glass-Wave/Addons/StatusPicker.css);
-@import url(/Glass-Wave/Addons/ChatBubbles.css);
-@import url(/Glass-Wave/Addons/Icons.css);
-@import url(/Glass-Wave/Addons/Animations.css);
+/* Glass Wave Addons */
+@import url("https://raw.githubusercontent.com/Elisniper/Glass-Wave/refs/heads/master/Addons/Animations.css");
+@import url("https://raw.githubusercontent.com/Elisniper/Glass-Wave/refs/heads/master/Addons/ChatBubbles.css");
+@import url("https://raw.githubusercontent.com/Elisniper/Glass-Wave/refs/heads/master/Addons/Icons.css");
+@import url("https://raw.githubusercontent.com/Elisniper/Glass-Wave/refs/heads/master/Addons/StatusPicker.css");
+/* Nexus Remastered */
 @import url("https://dablulite.github.io/NexusRemastered/import.css");
 
 
