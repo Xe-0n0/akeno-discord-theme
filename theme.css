@@ -2054,33 +2054,3 @@ html.theme-dark .mutualFriendsList_b433b4 > .collapseBtn_a4a127:hover { backgrou
     margin-top: 12px !important;
     z-index: 10      !important;
 }
-
-/* 1. Fond des messages standards */
-.message_d5de12 {
-    background-color: var(--var-chat-bubbles-background) !important;
-    border-radius: 10px !important;
-    margin: 2px 10px !important;
-    padding: 8px 10px !important;
-    border-left: 4px solid var(--var-hover20) !important; /* Ligne latérale subtile */
-}
-
-/* 2. Fond des messages mentionnés */
-.message_d5de12.mentioned_d5de12 {
-    background-color: var(--var-chat-mentioned) !important;
-    border-left: 4px solid var(--var-notification) !important;
-}
-
-/* 3. Ajustement de couleur pour le texte si nécessaire */
-.message_d5de12 .messageContent_f9f2ca {
-    color: var(--text-normal) !important;
-}
-
-/* 4. Effet de survol cohérent avec tes variables */
-.message_d5de12:hover {
-    background-color: var(--var-hover22) !important;
-}
-
-/* 5. Nettoyage des bordures par défaut */
-.message_d5de12::before {
-    display: none !important;
-}
