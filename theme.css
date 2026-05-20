@@ -16,14 +16,14 @@
 /* ─── VARIABLES ROOT ──────────────────────────────────────── */
 :root {
     /* Fond et positionnement */
-    --var-background:          url('https://wallpapercave.com/wp/wp7936990.jpg');
-    --var-background-size:     cover;
-    --var-background-position: center right;
+    --var-background:            url('https://wallpapercave.com/wp/wp7936990.jpg');
+    --var-background-size:       cover;
+    --var-background-position:   center right;
 
     /* Couleurs principales */
-    --var-accent:              #5E2A72D0;
-    --var-popout-color:        rgba(0, 0, 0, 0.301);
-    --var-notification:        #B00020;
+    --var-accent:                #5E2A72D0;
+    --var-popout-color:          rgba(0, 0, 0, 0.301);
+    --var-notification:          #B00020;
 
     /* Chat */
     --var-chat-bubbles-background: #1e0e2e8e;
