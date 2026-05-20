@@ -2055,17 +2055,55 @@ html.theme-dark .mutualFriendsList_b433b4 > .collapseBtn_a4a127:hover { backgrou
     z-index: 10      !important;
 }
 
-/* ─── FOND COLORÉ DES MESSAGES ────────────────────────── */
+/* ─── FOND GROUPÉ DES MESSAGES ─────────────────────────── */
 
+/* Base : transparence sur tous */
 .message__5126c.cozyMessage__5126c.wrapper_c19a55 {
-    background-color: rgba(0, 0, 0, 0.3) !important; /* Change cette couleur/opacité selon tes goûts */
-    border-radius: 10px !important;
-    padding: 8px 12px !important;
-    margin: 4px 10px !important;
-    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  margin: 0 10px !important;
+  padding: solid 0 !important;
+  border: none !important;
 }
 
-/* Optionnel : Effet visuel au survol de la souris */
+/* Premier message d'un groupe : début du fond, coins haut arrondis */
+.messageListItem__5126c:has(.groupStart__5126c) .message__5126c.wrapper_c19a55 {
+  background: var(--var-chat-bubbles-background) !important;
+  border-radius: 10px 10px 0 0 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.03) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.03) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.03) !important;
+  margin-top: 4px !important;
+  padding-top: 4px !important;
+}
+
+/* Messages de continuation (pas groupStart) */
+.messageListItem__5126c:not(:has(.groupStart__5126c)) .message__5126c.wrapper_c19a55 {
+  background: var(--var-chat-bubbles-background) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.03) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Dernier message avant un nouveau groupStart ou fin de liste */
+.messageListItem__5126c:has(.groupStart__5126c):not(:has(+ .messageListItem__5126c:not(:has(.groupStart__5126c)))) .message__5126c.wrapper_c19a55,
+.messageListItem__5126c:not(:has(.groupStart__5126c)):not(:has(+ .messageListItem__5126c:not(:has(.groupStart__5126c)))) .message__5126c.wrapper_c19a55 {
+  border-radius: 0 0 10px 10px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+  padding-bottom: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+/* Message seul (groupStart immédiatement suivi d'un autre groupStart) */
+.messageListItem__5126c:has(.groupStart__5126c):has(+ .messageListItem__5126c:has(.groupStart__5126c)) .message__5126c.wrapper_c19a55,
+.messageListItem__5126c:has(.groupStart__5126c):last-child .message__5126c.wrapper_c19a55 {
+  background: var(--var-chat-bubbles-background) !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  padding: 4px 0 !important;
+  margin: 4px 10px !important;
+}
+
+/* Hover */
 .message__5126c.cozyMessage__5126c.wrapper_c19a55:hover {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
