@@ -2107,3 +2107,195 @@ html.theme-dark .mutualFriendsList_b433b4 > .collapseBtn_a4a127:hover { backgrou
 .message__5126c.cozyMessage__5126c.wrapper_c19a55:hover {
   background: rgba(255, 255, 255, 0.05) !important;
 }
+
+/* ═══════════════════════════════════════════════
+   FRIENDGRID — OVERRIDE COMPLET
+   ═══════════════════════════════════════════════ */
+
+/* Carte */
+.peopleColumn__133bf .peopleListItem_cc6179 {
+    position: relative !important;
+    overflow: hidden !important;
+    height: auto !important;
+    min-height: calc(var(--FG-cards-height) + var(--FG-cards-banner-height)) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* listItemContents : ancre principale pour tous les absolus */
+.peopleColumn__133bf .listItemContents_fc004c {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: inherit !important;
+}
+
+/* userInfo : conteneur avatar + pseudo-bannière */
+.peopleColumn__133bf .userInfo__0a06e {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: inherit !important;
+    overflow: visible !important;
+    transform: none !important;
+    margin-bottom: 0 !important;
+}
+
+/* Bannière (pseudo-élément) — conservée */
+.peopleColumn__133bf .userInfo__0a06e::before {
+    content: "" !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: calc(60px + var(--FG-cards-banner-height)) !important;
+    min-height: 60px !important;
+    background-image: var(--user-banner) !important;
+    background-position: center !important;
+    background-color: var(--user-accent-color) !important;
+    background-size: cover !important;
+    top: 0 !important;
+    left: 0 !important;
+    opacity: var(--FG-cards-banner-opacity-normal) !important;
+    transition: var(--FG-transition) !important;
+}
+
+.peopleColumn__133bf .peopleListItem_cc6179:hover .userInfo__0a06e::before {
+    opacity: var(--FG-cards-banner-opacity-hover) !important;
+}
+
+/* Avatar */
+.peopleColumn__133bf .wrapper__44b0c.avatar__0a06e {
+    transform: scale(1.5) !important;
+    margin-left: calc(5px + var(--FG-avatar-margin-left)) !important;
+    margin-top: calc(5px + var(--FG-cards-banner-height)) !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Fond derrière l'avatar — conservé */
+.peopleColumn__133bf .avatar__0a06e::before {
+    content: "" !important;
+    position: absolute !important;
+    width: 116% !important;
+    height: 116% !important;
+    left: -8% !important;
+    top: -8% !important;
+    background: var(--FG-cards-background-normal) !important;
+    border-radius: var(--rs-avatar-shape, var(--FG-avatar-shape)) !important;
+    transition: var(--FG-transition) !important;
+}
+
+.peopleColumn__133bf .peopleListItem_cc6179:hover .avatar__0a06e::before {
+    background: var(--FG-cards-background-hover) !important;
+}
+
+/* Bloc username + name — en haut à droite de l'avatar */
+.peopleColumn__133bf .text__0a06e {
+    position: absolute !important;
+    top: var(--FG-cards-banner-height) !important;
+    left: 70px !important;
+    right: 0px !important;
+    width: auto !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    z-index: 2 !important;
+}
+
+/* info_f4bc97 : colonne pour order */
+.peopleColumn__133bf .info_f4bc97 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+}
+
+/* Username — ligne 1 */
+.peopleColumn__133bf .username__0a06e {
+    order: 0 !important;
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    color: var(--FG-cards-username-normal) !important;
+    max-width: calc(100% - 90px) !important;
+}
+
+/* Name — ligne 2 */
+.peopleColumn__133bf .infoSpacing_f4bc97 {
+    order: 1 !important;
+    display: block !important;
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Activity — bas de carte, position fixe */
+.peopleColumn__133bf .subtext__0a06e {
+    position: absolute !important;
+    bottom: 14px !important;
+    left: -60px !important;
+    right: 20px !important;
+    top: auto !important;
+    width: auto !important;
+    font-size: 11px !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Supprime le hack overflow_b0dfc2 */
+.peopleColumn__133bf .overflow_b0dfc2 {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+}
+
+/* Actions — haut à droite, toujours blanches et visibles */
+.peopleColumn__133bf .actions_fc004c {
+    position: absolute !important;
+    top: 6px !important;
+    right: 6px !important;
+    margin: 0 !important;
+    transform: none !important;
+    gap: 2px;
+}
+
+.peopleColumn__133bf .actions_fc004c .actionButton_f8fa06 {
+    opacity: 1 !important;
+    color: #ffffff !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.peopleColumn__133bf .actions_fc004c .actionButton_f8fa06:hover {
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.peopleColumn__133bf .actions_fc004c .icon_f8fa06 {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+/* Hover carte — contour blanc */
+.peopleColumn__133bf .peopleListItem_cc6179:hover {
+    background-color: var(--var-chat-bubbles-background) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    transition: var(--FG-transition) !important;
+}
